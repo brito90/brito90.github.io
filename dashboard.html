@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visão Cultural - Dashboard</title>
+    <title>Visão Cultural - Fotografia & Produção Cultural</title>
     <style>
         * {
             margin: 0;
@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1e 50%, #16213e 100%);
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
             color: #fff;
             min-height: 100vh;
             overflow-x: hidden;
@@ -25,9 +25,9 @@
             justify-content: space-between;
             align-items: center;
             padding: 1.5rem 3rem;
-            background: rgba(26, 26, 46, 0.8);
+            background: rgba(10, 10, 10, 0.95);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0, 200, 255, 0.2);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -36,7 +36,7 @@
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
-            background: linear-gradient(90deg, #00c8ff 0%, #9333ea 100%);
+            background: linear-gradient(90deg, #d4af37 0%, #e85d04 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             display: flex;
@@ -49,11 +49,11 @@
             align-items: center;
             gap: 0.5rem;
             padding: 0.5rem 1rem;
-            background: rgba(0, 200, 255, 0.1);
-            border: 1px solid #00c8ff;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid #d4af37;
             border-radius: 20px;
             font-size: 0.9rem;
-            box-shadow: 0 0 20px rgba(0, 200, 255, 0.3);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
         }
 
         .status-dot {
@@ -70,8 +70,9 @@
         }
 
         .menu-btn {
-            background: rgba(0, 200, 255, 0.1);
-            border: 1px solid #00c8ff;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid #d4af37;
+            color: #d4af37;
             padding: 0.8rem;
             border-radius: 8px;
             cursor: pointer;
@@ -79,14 +80,14 @@
         }
 
         .menu-btn:hover {
-            background: rgba(0, 200, 255, 0.2);
-            box-shadow: 0 0 20px rgba(0, 200, 255, 0.5);
+            background: rgba(212, 175, 55, 0.2);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
         }
 
         /* Hero Section */
         .hero {
             text-align: center;
-            padding: 4rem 2rem;
+            padding: 5rem 2rem;
             position: relative;
         }
 
@@ -98,19 +99,20 @@
             transform: translate(-50%, -50%);
             width: 600px;
             height: 600px;
-            background: radial-gradient(circle, rgba(0, 200, 255, 0.15) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
             filter: blur(40px);
             z-index: -1;
         }
 
         .hero h1 {
-            font-size: clamp(2rem, 5vw, 4rem);
+            font-size: clamp(2.5rem, 6vw, 5rem);
             margin-bottom: 1rem;
-            background: linear-gradient(90deg, #ff007a 0%, #00c8ff 50%, #9333ea 100%);
+            background: linear-gradient(90deg, #d4af37 0%, #e85d04 50%, #d4af37 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: gradient 3s ease infinite;
             background-size: 200% auto;
+            font-weight: 800;
         }
 
         @keyframes gradient {
@@ -119,10 +121,10 @@
         }
 
         .hero p {
-            font-size: 1.3rem;
-            color: #00c8ff;
-            margin-bottom: 2rem;
-            text-shadow: 0 0 10px rgba(0, 200, 255, 0.5);
+            font-size: 1.5rem;
+            color: #d4af37;
+            margin-bottom: 2.5rem;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
         }
 
         .hero-buttons {
@@ -130,12 +132,13 @@
             gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
+            margin-bottom: 3rem;
         }
 
         .btn {
-            padding: 1rem 2rem;
+            padding: 1.2rem 2.5rem;
             border-radius: 30px;
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s;
@@ -146,47 +149,46 @@
         }
 
         .btn-primary {
-            background: linear-gradient(90deg, #00c8ff 0%, #9333ea 100%);
+            background: linear-gradient(90deg, #d4af37 0%, #e85d04 100%);
             color: #fff;
             border: none;
-            box-shadow: 0 0 30px rgba(0, 200, 255, 0.5);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
             animation: pulse-shadow 2s infinite;
         }
 
         @keyframes pulse-shadow {
-            0%, 100% { box-shadow: 0 0 30px rgba(0, 200, 255, 0.5); }
-            50% { box-shadow: 0 0 50px rgba(0, 200, 255, 0.8); }
+            0%, 100% { box-shadow: 0 0 30px rgba(212, 175, 55, 0.5); }
+            50% { box-shadow: 0 0 50px rgba(212, 175, 55, 0.8); }
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0 50px rgba(0, 200, 255, 0.8);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 0 50px rgba(212, 175, 55, 0.9);
         }
 
         .btn-secondary {
             background: transparent;
-            border: 2px solid #00c8ff;
-            color: #00c8ff;
+            border: 2px solid #d4af37;
+            color: #d4af37;
         }
 
         .btn-secondary:hover {
-            background: rgba(0, 200, 255, 0.1);
-            transform: translateY(-2px);
+            background: rgba(212, 175, 55, 0.1);
+            transform: translateY(-3px);
         }
 
         /* Social Icons */
         .social-icons {
             display: flex;
-            gap: 1rem;
+            gap: 1.5rem;
             justify-content: center;
-            margin-top: 2rem;
         }
 
         .social-icon {
-            width: 50px;
-            height: 50px;
-            background: rgba(0, 200, 255, 0.1);
-            border: 1px solid #00c8ff;
+            width: 60px;
+            height: 60px;
+            background: rgba(212, 175, 55, 0.1);
+            border: 2px solid #d4af37;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -194,15 +196,15 @@
             cursor: pointer;
             transition: all 0.3s;
             text-decoration: none;
-            color: #00c8ff;
-            font-size: 1.5rem;
+            color: #d4af37;
+            font-size: 1.8rem;
         }
 
         .social-icon:hover {
-            background: #00c8ff;
-            color: #0f0f1e;
-            box-shadow: 0 0 30px rgba(0, 200, 255, 0.8);
-            transform: translateY(-5px);
+            background: #d4af37;
+            color: #0a0a0a;
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.8);
+            transform: translateY(-8px) rotate(360deg);
         }
 
         /* Stats Section */
@@ -210,44 +212,201 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
-            padding: 3rem 3rem;
+            padding: 4rem 3rem;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .stat-card {
-            background: rgba(26, 26, 46, 0.6);
-            border: 1px solid rgba(0, 200, 255, 0.3);
-            border-radius: 15px;
-            padding: 2rem;
+            background: rgba(26, 26, 26, 0.8);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 20px;
+            padding: 2.5rem;
             text-align: center;
             transition: all 0.3s;
             backdrop-filter: blur(10px);
         }
 
         .stat-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 40px rgba(0, 200, 255, 0.3);
-            border-color: #00c8ff;
+            transform: translateY(-15px);
+            box-shadow: 0 15px 50px rgba(212, 175, 55, 0.4);
+            border-color: #d4af37;
         }
 
         .stat-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
         }
 
         .stat-number {
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: bold;
-            background: linear-gradient(90deg, #00c8ff 0%, #9333ea 100%);
+            background: linear-gradient(90deg, #d4af37 0%, #e85d04 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 0.5rem;
         }
 
         .stat-label {
-            color: #a0a0a0;
+            color: #b0b0b0;
+            font-size: 1.1rem;
+        }
+
+        /* Section Title */
+        .section {
+            padding: 4rem 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            background: linear-gradient(90deg, #d4af37 0%, #e85d04 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .gallery-item {
+            height: 300px;
+            background: rgba(26, 26, 26, 0.6);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.3);
+        }
+
+        .gallery-item::after {
+            content: 'Ver Projeto';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(212, 175, 55, 0.9);
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-weight: bold;
+            color: #0a0a0a;
+        }
+
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: rgba(26, 26, 26, 0.8);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: #d4af37;
+            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.3);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #d4af37;
+        }
+
+        .service-card p {
+            color: #b0b0b0;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(26, 26, 26, 0.8);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #d4af37;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(10, 10, 10, 0.8);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 10px;
+            color: #fff;
             font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #d4af37;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(10, 10, 10, 0.95);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            margin-top: 4rem;
+        }
+
+        .footer p {
+            color: #b0b0b0;
+            margin-bottom: 1rem;
         }
 
         /* Responsive */
@@ -260,8 +419,11 @@
                 padding: 3rem 1.5rem;
             }
             
-            .stats {
+            .stats, .section {
                 padding: 2rem 1.5rem;
+            }
+
+            .gallery-grid, .services-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -271,61 +433,147 @@
     <!-- Header -->
     <header class="header">
         <div class="logo">
-            ✨ Fotógrafo
+            🎭 Visão Cultural
         </div>
         <div class="status-badge">
             <span class="status-dot"></span>
-            Disponível para novos projetos
+            Disponível para projetos
         </div>
         <button class="menu-btn">☰</button>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Fotografia<br>& Arte Visual</h1>
-        <p>Transformando momentos em memórias</p>
+        <h1>Fotografia<br>& Produção Cultural</h1>
+        <p>Registrando memórias e construindo cultura</p>
         
         <div class="hero-buttons">
-            <a href="#orcamento" class="btn btn-primary">
-                ▶ Solicitar Orçamento
+            <a href="#contato" class="btn btn-primary">
+                📞 Solicitar Orçamento
             </a>
-            <a href="#portfolio" class="btn btn-secondary">
-                Ver Portfólio
+            <a href="#galeria" class="btn btn-secondary">
+                🖼️ Ver Portfólio
             </a>
         </div>
 
         <div class="social-icons">
-            <a href="https://wa.me/seu-numero" class="social-icon" target="_blank">💬</a>
-            <a href="https://instagram.com/seu-perfil" class="social-icon" target="_blank">📷</a>
-            <a href="mailto:seu-email@exemplo.com" class="social-icon" target="_blank">✉️</a>
+            <a href="https://wa.me/5571999999999" class="social-icon" target="_blank" title="WhatsApp">💬</a>
+            <a href="https://instagram.com/visaocultural" class="social-icon" target="_blank" title="Instagram">📷</a>
+            <a href="mailto:contato@visaocultural.com" class="social-icon" target="_blank" title="Email">✉️</a>
         </div>
     </section>
 
     <!-- Stats Section -->
     <section class="stats">
         <div class="stat-card">
-            <div class="stat-icon">🔮</div>
-            <div class="stat-number">150+</div>
+            <div class="stat-icon">🎨</div>
+            <div class="stat-number">200+</div>
             <div class="stat-label">Projetos Realizados</div>
         </div>
         
         <div class="stat-card">
             <div class="stat-icon">📸</div>
-            <div class="stat-number">500+</div>
-            <div class="stat-label">Fotos Publicadas</div>
+            <div class="stat-number">1.500+</div>
+            <div class="stat-label">Fotos Produzidas</div>
         </div>
         
         <div class="stat-card">
             <div class="stat-icon">✨</div>
-            <div class="stat-number">98%</div>
+            <div class="stat-number">100%</div>
             <div class="stat-label">Clientes Satisfeitos</div>
         </div>
         
         <div class="stat-card">
-            <div class="stat-icon">🎨</div>
-            <div class="stat-number">5+</div>
+            <div class="stat-icon">🏆</div>
+            <div class="stat-number">8+</div>
             <div class="stat-label">Anos de Experiência</div>
         </div>
     </section>
+
+    <!-- Gallery Section -->
+    <section class="section" id="galeria">
+        <h2 class="section-title">🖼️ Galeria de Projetos</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item" style="background: linear-gradient(45deg, rgba(212,175,55,0.3), rgba(10,10,10,0.9));"></div>
+            <div class="gallery-item" style="background: linear-gradient(135deg, rgba(232,93,4,0.3), rgba(10,10,10,0.9));"></div>
+            <div class="gallery-item" style="background: linear-gradient(225deg, rgba(212,175,55,0.3), rgba(10,10,10,0.9));"></div>
+            <div class="gallery-item" style="background: linear-gradient(315deg, rgba(232,93,4,0.3), rgba(10,10,10,0.9));"></div>
+            <div class="gallery-item" style="background: linear-gradient(45deg, rgba(232,93,4,0.3), rgba(10,10,10,0.9));"></div>
+            <div class="gallery-item" style="background: linear-gradient(135deg, rgba(212,175,55,0.3), rgba(10,10,10,0.9));"></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="servicos">
+        <h2 class="section-title">🛠️ Nossos Serviços</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🎭</div>
+                <h3>Produção Cultural</h3>
+                <p>Planejamento e execução de eventos culturais, exposições e projetos artísticos.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">📸</div>
+                <h3>Fotografia de Eventos</h3>
+                <p>Cobertura fotográfica profissional para eventos sociais, corporativos e culturais.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🎬</div>
+                <h3>Ensaios Fotográficos</h3>
+                <p>Retratos, ensaios temáticos e registros autorais com direção artística.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">💼</div>
+                <h3>Assessoria de Imagem</h3>
+                <p>Consultoria para artistas, marcas e profissionais que buscam identidade visual forte.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contato">
+        <h2 class="section-title">📞 Entre em Contato</h2>
+        <div class="contact-form">
+            <form>
+                <div class="form-group">
+                    <label>Nome</label>
+                    <input type="text" required placeholder="Seu nome completo">
+                </div>
+                
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" required placeholder="seuemail@exemplo.com">
+                </div>
+                
+                <div class="form-group">
+                    <label>Telefone</label>
+                    <input type="tel" placeholder="(71) 99999-9999">
+                </div>
+                
+                <div class="form-group">
+                    <label>Mensagem</label>
+                    <textarea required placeholder="Conte-nos sobre seu projeto..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                    🚀 Enviar Mensagem
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="social-icons" style="margin-bottom: 2rem;">
+            <a href="https://wa.me/5571999999999" class="social-icon" target="_blank">💬</a>
+            <a href="https://instagram.com/visaocultural" class="social-icon" target="_blank">📷</a>
+            <a href="mailto:contato@visaocultural.com" class="social-icon" target="_blank">✉️</a>
+        </div>
+        <p>&copy; 2026 Visão Cultural | Salvador, Bahia</p>
+        <p>Fotografia & Produção Cultural com excelência</p>
+    </footer>
 </body>
 </html>
