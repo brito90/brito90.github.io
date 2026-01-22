@@ -154,7 +154,7 @@ Atualmente coordeno **6 mega projetos** de sustentabilidade, educação e inova�
 
 ## 🌐 REDES & CONTATOS
 
-📧 **Email**: [brito90@github.com](mailto:brito90@github.com)  
+📧 **Email**: [kauansantiago1244@gmail.com](mailto:kauansantiago1244@gmail.com)  
 💼 **LinkedIn**: [@kauansantiagossa](https://www.linkedin.com/in/kauansantiagossa/)  
 🐙 **GitHub**: [@brito90](https://github.com/brito90)  
 📱 **WhatsApp**: +55 71 98765-4321  
